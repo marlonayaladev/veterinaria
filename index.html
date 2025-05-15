@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria Grupo 3</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- iconos cdnjs ☝ font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <!-- barra flotante que aparece al bajar -->
+    <div class="barra-flotante" id="barraFlotante">
+        
+        <div class="barra-flotante-contenido">
+            <img src="images/logo.png" alt="Logo pequeño" class="logo-flotante">
+            <nav class="enlaces-flotante">
+                <a href="#nosotros">Quiénes Somos</a>
+                <a href="#familia">Nuestra Familia</a>
+                <a href="#servicios">Especialidades</a>
+                <a href="#servicios-generales">Servicios</a>
+                <a href="#contacto">Contáctanos</a>
+            </nav>
+        </div>
+    </div>
+
+<!-- ============================ 
+     barra de navegación - navbar
+<!-- ============================ -->
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="hubert">
+        </div>
+        <div class="nav-links">
+            <a href="#nosotros">Quiénes Somos</a>
+            <a href="#familia">Nuestra Familia</a>
+            <a href="#servicios">Especialidades</a>
+            <a href="#servicios-generales">Servicios</a>
+            <a href="#contacto">Contáctanos</a>
+        </div>
+        <button class="menu-toggle" aria-label="Menú">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+<!-- ============================ 
+        sección principal
+<!-- ============================ -->
+
+    <header class="hero">
+        <h1>EMERGENCIAS VETERINARIAS<br>LAS 24 HORAS</h1>
+        <p>Ofrecemos servicios de peluquería para mascotas, consultas de especialidad, internamientos y tienda para mascotas.</p>
+        <div class="cta-buttons">
+            <button class="btn primary">Llamar a la central</button>
+            <button class="btn secondary">Contactar a admisión</button>
+        </div>
+    </header>
+
+    <!-- quiénes Somos -->
+    <section id="nosotros" class="about">
+        <div class="about-container">
+            <div class="about-info">
+                <h2>Quiénes Somos</h2>
+                <div class="about-dots">
+                    <span></span><span></span><span></span><span></span>
+                </div>
+                <p>
+                    En la Clínica Veterinaria Grupo	3, nos dedicamos al bienestar de tus mascotas. Con más de 50 años de experiencia, ofrecemos servicios veterinarios especializados en dermatología, oftalmología, cardiología y más. Nuestro equipo profesional garantiza la salud y belleza de tu mascota. Además, contamos con servicios de peluquería personalizados y un pet shop con alimentos, accesorios y juguetes de calidad. Para emergencias, estamos disponibles las 24 horas, brindando atención rápida y eficiente.
+                </p>
+            </div>
+            <div class="about-gallery">
+                <!-- imágenes de la vet -->
+                <img src="images/fachada.jpg" alt="Fachada clínica">
+                <img src="images/Recepción.jpg" alt="Recepción clínica">
+                <img src="images/Sala de espera.jpg" alt="Sala de espera">
+                <img src="images/Pet shop.jpg" alt="Pet shop">
+            </div>
+        </div>
+    </section>
+
+    <!-- Familia -->
+    <section id="familia" class="family">
+        <h2>La Familia</h2>
+        <div class="family-dots">
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="doctors-grid">
+            <!-- fundador -->
+            <div class="doctor-card">
+                <div class="doctor-img">
+                    <img src="images/doctor1.png" alt="Marlon">
+                </div>
+                <p class="role">FUNDADOR</p>
+                <h3>Dr. Marlon<br>Ayala</h3>
+                <div class="doctor-dots">
+                    <span></span><span></span><span></span>
+                </div>
+                <p class="doctor-desc">
+                    Nuestro director y fundador, médico veterinario con más de 40 años de dedicación y amor por los animales. Fue Presidente de la Academia de Ciencias Veterinarias y Decano Nacional del Colegio Médico Veterinario del Perú.
+                </p>
+            </div>
+            <!-- director -->
+            <div class="doctor-card">
+                <div class="doctor-img">
+                    <img src="images/doctor2.png" alt="Hubert">
+                </div>
+                <p class="role">DIRECTOR</p>
+                <h3>Dr. Hubert<br>Hilario Gomez</h3>
+                <div class="doctor-dots">
+                    <span></span><span></span><span></span>
+                </div>
+                <p class="doctor-desc">
+                    Médico veterinario especialista en animales menores, con más de dos décadas de experiencia. El Doctor Rodrigo Rondón se caracteriza por su delicada mano, sus acertados diagnósticos, y una sonrisa de oreja a oreja al recibir a sus pacientes.
+                </p>
+            </div>
+            <!-- doctor 1 -->
+            <div class="doctor-card">
+                <div class="doctor-img">
+                    <img src="images/doctor3.png" alt="Edward">
+                </div>
+                <p class="role">VETERINARIO</p>
+                <h3>Dr. Edward<br>Pittman Medina</h3>
+                <div class="doctor-dots">
+                    <span></span><span></span><span></span>
+                </div>
+                <p class="doctor-desc">
+                    Especialista en dermatología veterinaria, dedicada al diagnóstico y tratamiento de enfermedades de la piel en mascotas, con atención personalizada y calidez.
+                </p>
+            </div>
+            <!-- doctor 2 -->
+            <div class="doctor-card">
+                <div class="doctor-img">
+                    <img src="images/doctor4.png" alt="Abner">
+                </div>
+                <p class="role">VETERINARIO</p>
+                <h3>Dr. Abner<br>Gonzales Alcarraz</h3>
+                <div class="doctor-dots">
+                    <span></span><span></span><span></span>
+                </div>
+                <p class="doctor-desc">
+                    Experto en cardiología veterinaria, comprometido con la salud cardiovascular de los animales y reconocido por su trato amable y profesionalismo.
+                </p>
+            </div>
+            <!-- doctor 3 -->
+            <div class="doctor-card">
+                <div class="doctor-img">
+                    <img src="images/doctor5.jpg" alt="Ysoe">
+                </div>
+                <p class="role">VETERINARIO</p>
+                <h3>Dr. Ysoe<br>Ccoyllo Casimiro</h3>
+                <div class="doctor-dots">
+                    <span></span><span></span><span></span>
+                </div>
+                <p class="doctor-desc">
+                    Especialista en oftalmología veterinaria, apasionada por el cuidado de la visión y bienestar ocular de las mascotas, brindando atención dedicada y profesional.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Especialidades -->
+    <section id="servicios" class="specialties">
+        <div class="specialties-container">
+            <div class="specialties-text">
+                <span class="specialties-label">CONSULTA DE ESPECIALIDAD</span>
+                <h3>Los mejores especialistas<br>están al servicio<br>de tu mascota</h3>
+                <div class="specialties-dots">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+            <div class="specialties-list">
+                <ul>
+                    <li>
+                        <span class="spec-title">Oncología</span>
+                        <span class="spec-name">Dra. Mario Verano</span>
+                    </li>
+                    <li>
+                        <span class="spec-title">Fisioterapia</span>
+                        <span class="spec-name">Dra. Luccia Carpio</span>
+                    </li>
+                    <li>
+                        <span class="spec-title">Traumatología</span>
+                        <span class="spec-name">Dr. Luis Pareja</span>
+                    </li>
+                    <li>
+                        <span class="spec-title">Neurología</span>
+                        <span class="spec-name">Dr. Luis Ramos</span>
+                    </li>
+                    <li>
+                        <span class="spec-title">Odontología</span>
+                        <span class="spec-name">Dr. Jorge Hun</span>
+                    </li>
+                    <li>
+                        <span class="spec-title">Oftalmología</span>
+                        <span class="spec-name">Dra. Roxana Padilla</span>
+                    </li>
+                    <li>
+                        <span class="spec-title">Felinos</span>
+                        <span class="spec-name">Dra. Lizette Ampuero</span>
+                    </li>
+                    <li>
+                        <span class="spec-title">Cardiología</span>
+                        <span class="spec-name">Dr. Juan Diego Asencio</span>
+                    </li>
+                    <li>
+                        <span class="spec-title">Nutrición</span>
+                        <span class="spec-name">Dra. Marisol Sevilla</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- servicios generales -->
+    <section id="servicios-generales" class="main-services">
+        <h2>Nuestros Servicios</h2>
+        <div class="main-services-dots">
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="services-grid">
+            <!-- tarjeta de servicio: Consultas -->
+            <div class="service-card blue">
+                <div class="service-icon"><i class="fas fa-stethoscope"></i></div>
+                <div class="service-info">
+                    <h3>Consultas de especialidad</h3>
+                    <p>Consulta médica veterinaria con los mejores especialistas de todo el Perú siempre dispuestos a dar todo por la salud de tu mascota.</p>
+                </div>
+            </div>
+            <!-- tienda -->
+            <div class="service-card orange">
+                <div class="service-icon"><i class="fas fa-store"></i></div>
+                <div class="service-info">
+                    <h3>Tienda para mascotas</h3>
+                    <p>Tenemos la mejor y más variada tienda de artículos para mascotas de toda Lima.</p>
+                </div>
+            </div>
+            <!-- peluquería -->
+            <div class="service-card pink">
+                <div class="service-icon"><i class="fas fa-cut"></i></div>
+                <div class="service-info">
+                    <h3>Peluquería para mascotas</h3>
+                    <p>Cuidamos el aspecto y la salud de tu engreído haciendo uso de productos de la más alta calidad.</p>
+                </div>
+            </div>
+            <!-- cirugías -->
+            <div class="service-card green">
+                <div class="service-icon"><i class="fas fa-heartbeat"></i></div>
+                <div class="service-info">
+                    <h3>Cirugías</h3>
+                    <p>Cirugía veterinaria en las más modernas instalaciones y con los cirujanos más experimentados.</p>
+                </div>
+            </div>
+            <!-- internamientos -->
+            <div class="service-card yellow">
+                <div class="service-icon"><i class="fas fa-procedures"></i></div>
+                <div class="service-info">
+                    <h3>Internamientos de última generación</h3>
+                    <p>Área de internados de última generación y el mejor personal dedicado las 24 horas al cuidado tu mascota.</p>
+                </div>
+            </div>
+            <!-- laboratorio -->
+            <div class="service-card cyan">
+                <div class="service-icon"><i class="fas fa-vial"></i></div>
+                <div class="service-info">
+                    <h3>Laboratorio</h3>
+                    <p>Disponemos de los mejores analistas y el más moderno laboratorio de muestras.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contacto y ubicación -->
+    <section id="contacto" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2><strong>¿Necesitas<br>ayuda?</strong></h2>
+                <p>Puedes escribirnos a nuestro Whatsapp con alguna inquietud que tengas o para hacernos llegar tus sugerencias.</p>
+                <a class="btn whatsapp-btn" href="https://wa.me/51939533315" target="_blank">
+                    Contáctanos <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="contact-map">
+                <!-- mapa de ubicación-->
+                <iframe 
+                    src="https://www.google.com/maps?q=Peru&output=embed"
+                    width="100%" height="250" style="border:0; border-radius:18px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-social">
+                <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="footer-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="footer-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="footer-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="footer-menu">
+                <a href="#" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">Inicio</a>
+                <a href="#nosotros">Quiénes somos</a>
+                <a href="#servicios-generales">Servicios</a>
+                <a href="#servicios">Especialidades</a>
+            </div>
+            <div class="footer-contact">
+                <div><i class="fas fa-map-marker-alt"></i> Perú</div>
+                <div><i class="fas fa-phone"></i> Central: +51 939 533 315</div>
+                <div><i class="fab fa-whatsapp"></i> Admisión: 939 533 315</div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-bottom">
+            <span>© 2025 Veterinaria Grupo 3</span>
+        </div>
+    </footer>
+
+    <!-- js -->
+    <script src="/scripts/main.js"></script>
+</body>
+</html>

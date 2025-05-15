@@ -1,0 +1,996 @@
+/* =========================
+   variables globales
+   ========================= */
+:root {
+    --primary-color: #059297;
+    --secondary-color: #08d9e0; 
+    --text-color: #333;
+    --light-gray: #f4f4f4;
+    --white: #ffffff;
+    --shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+        /* Ocultar barra flotante en dispositivos móviles */
+        @media (max-width: 768px) {
+            .barra-flotante {
+                display: none;
+            }
+        }
+
+/* =========================
+   reset y estilos base
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* =========================
+   navbar
+   ========================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 5%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: none;
+}
+
+.logo img {
+    height: 100px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 1.05rem;
+    text-decoration: none;
+    transition: color 0.2s;
+    letter-spacing: 0.01em;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+/* navbar con fondo de color al hacer scroll */
+
+.navbar.scrolled .nav-links a {
+    color: var(--primary-color);
+}
+
+.navbar.scrolled .nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+.navbar.scrolled .logo img {
+    filter: none;
+}
+
+/* =========================
+   sección principal (Hero)
+   ========================= */
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 1rem;
+}
+
+.hero h1 {
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 4vw;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    line-height: 1.1;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.hero p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.18);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* botones principales */
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* boton de inicio */
+
+.btn.primary { 
+    background: #08d9e0;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    border: none;
+    transition: background 0.2s;
+}
+
+/* efecto al poner el mouse sobre el botón */
+
+.btn.primary:hover {
+    background: #059297;
+}
+
+.btn.secondary {
+    background: #08d9e0;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn.secondary:hover {
+    background: #059297;
+    color: #fff;
+}
+
+/* =========================
+   secciones generales
+   ========================= */
+section {
+    padding: 5rem 10%;
+}
+
+/* =========================
+   quiénes Somos
+   ========================= */
+.about {
+    background: #fff;
+    padding: 4rem 0 4rem 0;
+}
+
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.about-info {
+    flex: 1.2;
+    min-width: 320px;
+}
+
+.about-info h2 {
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+
+.about-dots {
+    margin-bottom: 1.5rem;
+}
+
+.about-dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.about-dots span:last-child {
+    margin-right: 0;
+}
+
+.about-info p {
+    font-size: 1.13rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 0;
+    max-width: 520px;
+}
+
+.about-gallery {
+    flex: 1.5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.2rem;
+    min-width: 320px;
+}
+
+.about-gallery img {
+    width: 100%;
+    aspect-ratio: 1.3/1;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    background: #eee;
+}
+
+/* =========================
+   Familia
+   ========================= */
+.family {
+    background: #fafafa;
+    padding: 4rem 0 4rem 0;
+    text-align: center;
+}
+
+.family h2 {
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+
+.family-dots {
+    margin: 1.5rem 0 2.5rem 0;
+}
+
+.family-dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    margin: 0 7px;
+}
+
+.doctors-grid {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.doctor-card {
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.07);
+    padding: 2.5rem 2rem 2rem 2rem;
+    max-width: 370px;
+    min-width: 270px;
+    flex: 1 1 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s;
+}
+
+.doctor-card:hover {
+    box-shadow: 0 6px 32px rgba(142,68,173,0.13);
+}
+
+.doctor-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+.doctor-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.role {
+    font-size: 0.95rem;
+    color: #888;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.doctor-card h3 {
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #222;
+    margin-bottom: 0.7rem;
+    line-height: 1.15;
+}
+
+.doctor-dots {
+    margin-bottom: 1.1rem;
+}
+
+.doctor-dots span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #08d9e0;
+    border-radius: 50%;
+    margin: 0 3px;
+}
+
+.doctor-desc {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+}
+
+/* =========================
+   Especialidades
+   ========================= */
+.specialties {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 5rem 10%;
+}
+
+.specialties-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.specialties-text {
+    flex: 1.2;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.specialties-label {
+    font-size: 0.95rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-bottom: 1.2rem;
+    display: inline-block;
+}
+
+.specialties-text h3 {
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
+}
+
+.specialties-dots {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.specialties-dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    opacity: 0.7;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.specialties-dots span:last-child {
+    margin-right: 0;
+}
+
+.specialties-list {
+    flex: 1.5;
+    min-width: 260px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.specialties-list ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.3rem 2.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.specialties-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.specialties-list li::before {
+    content: '\25B6';
+    color: #fff;
+    font-size: 0.9em;
+    position: absolute;
+    left: 0;
+    top: 0.2em;
+    opacity: 0.8;
+}
+
+.spec-title {
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 1.15em;
+    margin-bottom: 0.1em;
+    color: #fff;
+}
+
+.spec-name {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.98em;
+    color: #fff;
+    opacity: 0.85;
+    font-weight: 400;
+}
+
+/* =========================
+   Nuestros Servicios
+   ========================= */
+.main-services {
+    background: #fafafa;
+    padding: 3.5rem 0 3.5rem 0;
+    text-align: center;
+}
+
+.main-services h2 {
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #222;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.01em;
+}
+
+.main-services-dots {
+    margin: 1.5rem 0 2.5rem 0;
+}
+
+.main-services-dots span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    margin: 0 6px;
+    opacity: 0.7;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 2.5rem;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(44, 44, 44, 0.07);
+    padding: 2.2rem 2rem 2rem 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.3rem;
+    min-height: 170px;
+    transition: box-shadow 0.18s;
+    text-align: left;
+}
+
+.service-card:hover {
+    box-shadow: 0 8px 32px rgba(142,68,173,0.13);
+}
+
+.service-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.service-card.blue .service-icon { background: #3b82f6; color: #fff; }
+.service-card.orange .service-icon { background: #ff6d1f; color: #fff; }
+.service-card.pink .service-icon { background: #ff006e; color: #fff; }
+.service-card.green .service-icon { background: #22c55e; color: #fff; }
+.service-card.yellow .service-icon { background: #ffd600; color: #b48a00; }
+.service-card.cyan .service-icon { background: #00b4d8; color: #fff; }
+
+.service-info {
+    flex: 1;
+}
+
+.service-card h3 {
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 1.18rem;
+    font-weight: 900;
+    color: #222;
+    margin-bottom: 0.4rem;
+    margin-top: 0;
+    letter-spacing: 0.01em;
+}
+
+.service-card p {
+    font-size: 1.01rem;
+    color: #444;
+    line-height: 1.5;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+}
+
+/* =========================
+   Sección de contacto
+   ========================= */
+.contact-section {
+    background: #fff;
+    padding: 4rem 0 4rem 0;
+}
+
+.contact-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1.2;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info h2 {
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #222;
+    margin-bottom: 1.2rem;
+    line-height: 1.1;
+}
+
+.contact-info p {
+    font-size: 1.08rem;
+    color: #888;
+    margin-bottom: 2.2rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+    max-width: 400px;
+}
+
+.btn.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    background: #08d9e0;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.08rem;
+    padding: 0.9rem 2.2rem;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.btn.whatsapp-btn i {
+    font-size: 1.2em;
+}
+
+.btn.whatsapp-btn:hover {
+    background: #059297;
+    color: #fff;
+}
+
+.contact-map {
+    flex: 1.5;
+    min-width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-map iframe {
+    width: 100%;
+    min-width: 260px;
+    max-width: 420px;
+    height: 250px;
+    border-radius: 18px;
+    border: none;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    background: #eee;
+}
+
+/* =========================
+   Pie de página moderno
+   ========================= */
+.main-footer {
+    background: #f7f7f7;
+    color: #222;
+    padding: 2.5rem 0 0.5rem 0;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto 1.5rem auto;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    align-items: flex-start;
+    min-width: 110px;
+    margin-top: 0.2rem;
+}
+.footer-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-right: 0.3rem;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+    transition: background 0.2s, color 0.2s;
+    border: 1px solid #eee;
+}
+.footer-icon:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    min-width: 170px;
+}
+.footer-menu a {
+    color: #444;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+.footer-menu a:hover {
+    color: var(--primary-color);
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 210px;
+    font-size: 0.98rem;
+}
+.footer-contact i {
+    color: var(--primary-color);
+    margin-right: 0.5em;
+    font-size: 1.05em;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0.97rem;
+    color: #888;
+    padding-bottom: 0.5rem;
+}
+
+.footer-madeby {
+    font-size: 0.97rem;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+}
+
+/* =========================
+   Barra flotante que aparece al bajar
+   ========================= */
+.barra-flotante {
+    position: fixed;
+    top: -90px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.07);
+    z-index: 2000;
+    transition: top 0.35s cubic-bezier(0.4, 1.3, 0.5, 1), opacity 0.3s ease;
+    border-bottom: 1px solid #eee;
+    padding: 0;
+    opacity: 0;
+}
+
+.barra-flotante.visible {
+    top: 0;
+    opacity: 1;
+}
+
+.barra-flotante-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.3rem 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+.logo-flotante {
+    height: 64px;
+    width: auto;
+    margin-right: 1.5rem;
+}
+
+.enlaces-flotante {
+    display: flex;
+    gap: 2.1rem;
+}
+
+.enlaces-flotante a {
+    color: #222;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 1.03rem;
+    text-decoration: none;
+    transition: color 0.18s;
+    letter-spacing: 0.01em;
+    padding: 0.2em 0.6em;
+    border-radius: 6px;
+}
+
+.enlaces-flotante a:hover,
+.enlaces-flotante a:focus {
+    color: #08d9e0;
+    background: #f3f3f3;
+}
+
+/* Oculta el logo del navbar cuando la barra flotante está visible */
+.barra-flotante.visible ~ .navbar .logo {
+    display: none;
+}
+
+/* Oculta toda la navbar cuando la barra flotante está visible */
+.barra-flotante.visible ~ .navbar {
+    display: none;
+}
+
+/* =========================
+   Responsive (adaptable)
+   ========================= */
+@media (max-width: 1100px) {
+    .about-container {
+        flex-direction: column;
+        gap: 2.5rem;
+        align-items: stretch;
+    }
+    .about-gallery {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .doctors-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .doctor-card {
+        max-width: 95vw;
+    }
+    .specialties-container {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    .specialties-list ul {
+        grid-template-columns: 1fr;
+        gap: 1.1rem 0;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .contact-container {
+        flex-direction: column;
+        gap: 2.5rem;
+        align-items: stretch;
+    }
+    .contact-map iframe {
+        max-width: 100%;
+        min-width: 0;
+    }
+    .contact-info {
+        align-items: flex-start;
+    }
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 0.7rem;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 700px) {
+    .about-info h2 {
+        font-size: 2.1rem;
+    }
+    .about-info p {
+        font-size: 1rem;
+    }
+    .about-gallery {
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+    .specialties-text h3 {
+        font-size: 1.3rem;
+    }
+    .specialties-label {
+        font-size: 0.85rem;
+    }
+    .main-services h2 {
+        font-size: 2rem;
+    }
+    .service-card {
+        padding: 1.5rem 1rem;
+        min-height: 0;
+    }
+    .service-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: rgba(34,34,34,0.98);
+        flex-direction: column;
+        width: 100vw;
+        padding: 2rem 0;
+        gap: 1.5rem;
+        align-items: flex-end;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .nav-links.active {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .nav-links a {
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 0.5rem 1.5rem;
+        border-radius: 8px;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        background: #08d9e0;
+        color: #fff;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .menu-toggle.active {
+        transform: rotate(90deg);
+    }
+
+    .navbar {
+        padding: 0.7rem 1.5rem;
+    }
+}
