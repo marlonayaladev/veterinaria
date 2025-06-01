@@ -335,6 +335,7 @@ section {
     border-radius: 50%;
 }
 
+
 .role {
     font-size: 0.95rem;
     color: #888;
@@ -993,4 +994,8 @@ section {
     .navbar {
         padding: 0.7rem 1.5rem;
     }
+}
+
+.doctor-img-Marlon{
+    top: -90px;
 }
